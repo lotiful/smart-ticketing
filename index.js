@@ -45,6 +45,7 @@ for (let item of seat) {
         if (counter <= 4) {
 
             item.style.backgroundColor = "#1DD100";
+            // if(!counterArr.includes[])
 
 
 
@@ -73,12 +74,15 @@ for (let item of seat) {
             // Discount function
             if (totalRemain === 4) {
                 disableBtn.removeAttribute("disabled");
+                
             }
+
 
 
         } else {
             // item.setAttribute("disabled", "");
             alert("No More Seat");
+            counter =-1;
         }
         console.log(counterArr);
 
