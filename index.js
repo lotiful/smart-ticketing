@@ -44,9 +44,12 @@ for (let item of seat) {
 
         if (counter <= 4) {
 
-            item.style.backgroundColor = "#1DD100";
-            // if(!counterArr.includes[])
+            
+            if(!counterArr.includes(item.innerText)){
+                counterArr.push(item.innerText);
+                item.style.backgroundColor = "#1DD100";
 
+                console.log(counterArr);
 
 
             totalSeat = totalSeat - 1;
@@ -71,24 +74,24 @@ for (let item of seat) {
             `;
             dynamicSeatdetails.appendChild(div);
 
+
             // Discount function
             if (totalRemain === 4) {
                 disableBtn.removeAttribute("disabled");
                 
             }
+            }else{
+                alert("Already Selected");
+                counter -=1;
 
+            }
 
 
         } else {
-            // item.setAttribute("disabled", "");
             alert("No More Seat");
-            counter =-1;
+            
         }
-        console.log(counterArr);
 
-        console.log(item.innerText);
-
-        // item.style.backgroundColor = "#1DD100";
         nextBtn.removeAttribute("disabled");
     });
 }
